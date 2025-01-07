@@ -22,7 +22,25 @@ int main(int argc, char *argv[]) {
 				std::cout << "\nFATAL ERROR: no input files\n\n";
 				return FATAL_ERROR;
 			}
+			if (strstr(argv[2], ".cpi")) {
+				readfile(argv[2]);
+				return EXIT_CODE
+			}
+			else {
+				std::cout << "\nFATAL ERROR: FILE ISNT CPI\n\n";
+				return FATAL_ERROR;
+			}
+
+		}
+		else {
+			std::cout << "\nFATAL ERROR\n\n";
+			return FATAL_ERROR;
 		}
 	}
+	return EXIT_CODE;
+}
+
+int readfile(std::string argv) {
+	std::cout << "\nreading file\n\n";
 	return EXIT_CODE;
 }

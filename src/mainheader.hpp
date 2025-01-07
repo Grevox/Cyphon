@@ -1,6 +1,8 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <cstring>
 
 enum data {
 	INT,
@@ -13,3 +15,5 @@ enum data {
 	U_INT,
 	U_FLT,
 };
+
+int readfile(std::string argv);
