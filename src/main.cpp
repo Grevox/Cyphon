@@ -1,15 +1,20 @@
 #include "mainheader.hpp"
 void ToBuffer(std::string read, std::ifstream& file) {
-	int n = 11;
+	int n = 10;
+	if (read == "exit") {
+		return;
+	}
+	std::string buf;
 	std::cout << "\n";
-	char lol[SIZE];
 	while (read[n] != '\"') {
-
-		lol[n] = read[n];
+		buf.push_back(read[n]);
 		n++;
 	}
-	std::cout << lol;
+
+	std::cout << buf;
+
 	readfile("idc", false, file);
+
 }
 
 int main(int argc, char *argv[]) {
@@ -64,17 +69,21 @@ int readfile(std::string argv, bool firsttime, std::ifstream &file) {
 	//reading file until there is a ;
 	return EXIT_CODE;
 }
-void readtheline(std::string read, std::ifstream &file) {
-	char* ll;
-	strcpy(ll, read.c_str());
+void readtheline(std::string read, std::ifstream& file) {
+
 	if (read == "exit") {
 		return;
 	}
-	if (strstr(ll, "ToBuffer") == 0) {
-		ToBuffer(read,file);
+	if (read.substr(0, 8) == "ToBuffer") {
+		std::string read2 = read;
+		ToBuffer(read2, file);
 	}
-	else {
-		printf("\n\n\n idk");
+	if (read == "exit") {
+		return;
 	}
+	if (!file.eof()){
+		readfile(read, false, file);
+}
+	
 	readfile(read,false,file);
 }

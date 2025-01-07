@@ -1,1 +1,7 @@
-ToBuffer("ciao, mi chiamo mattia")
+ToBuffer("Test: Successfull")
+
+ToBuffer("Other Test")
+
+exit
+
+ToBuffer("shouldnt see me")
