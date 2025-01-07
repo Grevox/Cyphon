@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 			std::cout << "\n-h : get more info\n-o : start interpreter\n-v : version\n\n";
 		}
 		else if (strcmp("-v", argv[1]) == 0) {
-			std::cout << "\nSiphon interpreter  [SI]\nVersion: 0.0.1\n\n";
+			std::cout << "\nCyphon interpreter  [CpI]\nVersion: 0.0.1\n\n";
 		}
 		else if (strcmp("-o", argv[1]) == 0) {
 			if (argv[2] == NULL) {
