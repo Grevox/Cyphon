@@ -1,7 +1,5 @@
-#include "mainheader.hpp"
-#define FATAL_ERROR -1;
-#define ERROR 1;
-#define EXIT_CODE 0;
+#include "stl.hpp"
+
 int main(int argc, char *argv[]) {
 	if (argc <= 1) {
 		std::cout << "\nFATAL ERROR: no specifier :\ntry to do: -h to get some more info\n\n";
@@ -23,8 +21,9 @@ int main(int argc, char *argv[]) {
 				return FATAL_ERROR;
 			}
 			if (strstr(argv[2], ".cpi")) {
-				readfile(argv[2]);
-				return EXIT_CODE
+				std::ifstream file(argv[2]);
+				readfile(argv[2],true,file);
+				return EXIT_CODE;
 			}
 			else {
 				std::cout << "\nFATAL ERROR: FILE ISNT CPI\n\n";
@@ -40,7 +39,19 @@ int main(int argc, char *argv[]) {
 	return EXIT_CODE;
 }
 
-int readfile(std::string argv) {
-	std::cout << "\nreading file\n\n";
+int readfile(std::string argv, bool firsttime, std::ifstream file) {
+	std::string readuntilstop;
+	int n = 0;
+	getline(file,readuntilstop)
+	std::cout
+	//std::cout << "\n" << readuntilstop << "\n";
+	//char lol = file.get();
+	//std::cout << "\n" << lol;
+	//reading file until there is a ;
 	return EXIT_CODE;
+}
+void readtheline(std::string read) {
+	if (read == "exit") {
+		return;
+	}
 }
