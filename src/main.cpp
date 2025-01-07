@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 int readfile(std::string argv, bool firsttime, std::ifstream &file) {
 	std::string readuntilstop;
 	int n = 0;
-	
+
 	getline(file, readuntilstop);
 	readtheline(readuntilstop,file);
 	
@@ -84,6 +84,8 @@ void readtheline(std::string read, std::ifstream& file) {
 	if (!file.eof()){
 		readfile(read, false, file);
 }
-	
+	if (read.substr(0, 3) == "exit") {
+		return;
+	}
 	readfile(read,false,file);
 }
