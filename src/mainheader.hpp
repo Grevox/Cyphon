@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <bits/stdc++.h>
 #include <ostream>
 #include <cstring>
 #define FATAL_ERROR -1
@@ -28,5 +29,5 @@ enum data {
 	U_FLT,
 };
 
-int readfile(std::string argv, bool firsttime, std::ifstream file);
-void readtheline(std::string read);
+int readfile(std::string argv, bool firsttime, std::ifstream &file);
+void readtheline(std::string read, std::ifstream& file);
