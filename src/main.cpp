@@ -80,8 +80,8 @@ void readtheline(std::string read, std::ifstream& file) {
 		std::string read2 = read;
 		ToBuffer(read2, file);
 	}
-	else if () {
-
+	else if (read.substr(0,3) == "Add") {
+		
 	}
 	readfile(read,false,file);
 }
