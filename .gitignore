@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+*.json
+*.ipch
+*.vsidx
+.vs/Siphon/v17/.wsuo
+*.opendb
+*.db-wal
+*.db-shm
+*.db
+*.sqlite
+.vs/
