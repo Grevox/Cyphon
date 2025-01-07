@@ -58,9 +58,13 @@ int main(int argc, char *argv[]) {
 
 int readfile(std::string argv, bool firsttime, std::ifstream &file) {
 	std::string readuntilstop;
+
 	int n = 0;
 
 	getline(file, readuntilstop);
+	if (readuntilstop == "exit") {
+		return ;
+	}
 	readtheline(readuntilstop,file);
 	
 	//std::cout << "\n" << readuntilstop << "\n";
@@ -71,21 +75,13 @@ int readfile(std::string argv, bool firsttime, std::ifstream &file) {
 }
 void readtheline(std::string read, std::ifstream& file) {
 
-	if (read == "exit") {
-		return;
-	}
+	
 	if (read.substr(0, 8) == "ToBuffer") {
 		std::string read2 = read;
 		ToBuffer(read2, file);
 	}
-	if (read == "exit") {
-		return;
-	}
-	if (!file.eof()){
-		readfile(read, false, file);
-}
-	if (read.substr(0, 3) == "exit") {
-		return;
+	else if () {
+
 	}
 	readfile(read,false,file);
 }

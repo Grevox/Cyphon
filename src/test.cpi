@@ -1,7 +1,1 @@
-ToBuffer("Test: Successfull")
-
-ToBuffer("Other Test")
-
-exit
-
-ToBuffer("shouldnt see me")
+ToBuffer("This works")
