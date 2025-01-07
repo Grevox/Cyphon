@@ -8,6 +8,7 @@
 #define FATAL_ERROR -1
 #define ERROR 1
 #define EXIT_CODE 0
+#define EXIT_FUNC 2
 #define NEWLINE '\n'
 #define TAB '\t'
 #define SIZE 10050

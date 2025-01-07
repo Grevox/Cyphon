@@ -63,7 +63,7 @@ int readfile(std::string argv, bool firsttime, std::ifstream &file) {
 
 	getline(file, readuntilstop);
 	if (readuntilstop == "exit") {
-		return ;
+		return EXIT_FUNC;
 	}
 	readtheline(readuntilstop,file);
 	
